@@ -1,0 +1,6 @@
+framework module Pods_DisFircalamaHatirlaticisi {
+  umbrella header "Pods-DisFircalamaHatirlaticisi-umbrella.h"
+
+  export *
+  module * { export * }
+}
