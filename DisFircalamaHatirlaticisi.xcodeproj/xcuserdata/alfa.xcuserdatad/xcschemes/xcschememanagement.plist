@@ -7,7 +7,25 @@
 		<key>DisFircalamaHatirlaticisi.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>12</integer>
+			<integer>16</integer>
+		</dict>
+		<key>OneSignalNotificationServiceExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>15</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>7524BBDE293113D800006CE6</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7538F08829312E1C00EA5E4E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

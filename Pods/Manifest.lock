@@ -85,12 +85,23 @@ PODS:
     - nanopb/encode (= 2.30909.0)
   - nanopb/decode (2.30909.0)
   - nanopb/encode (2.30909.0)
+  - OneSignalXCFramework (3.12.3):
+    - OneSignalXCFramework/OneSignalCore (= 3.12.3)
+    - OneSignalXCFramework/OneSignalExtension (= 3.12.3)
+    - OneSignalXCFramework/OneSignalOutcomes (= 3.12.3)
+  - OneSignalXCFramework/OneSignalCore (3.12.3)
+  - OneSignalXCFramework/OneSignalExtension (3.12.3):
+    - OneSignalXCFramework/OneSignalCore
+    - OneSignalXCFramework/OneSignalOutcomes
+  - OneSignalXCFramework/OneSignalOutcomes (3.12.3):
+    - OneSignalXCFramework/OneSignalCore
   - PromisesObjC (2.1.1)
 
 DEPENDENCIES:
   - Firebase
   - FirebaseAnalytics
   - FirebaseAuth
+  - OneSignalXCFramework (< 4.0, >= 3.0)
 
 SPEC REPOS:
   trunk:
@@ -104,6 +115,7 @@ SPEC REPOS:
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
+    - OneSignalXCFramework
     - PromisesObjC
 
 SPEC CHECKSUMS:
@@ -117,8 +129,9 @@ SPEC CHECKSUMS:
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
+  OneSignalXCFramework: 75844c29607ca95e6176f6f21257b4382c7fdbfb
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: cb1db484a3411c9edff4bd13023a8dc10ec9ae9a
+PODFILE CHECKSUM: 7dff2acf12ba81a10bd956a22da0d04922e5ec80
 
 COCOAPODS: 1.11.3
