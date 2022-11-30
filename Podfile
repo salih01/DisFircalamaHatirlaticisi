@@ -9,6 +9,7 @@ target 'DisFircalamaHatirlaticisi' do
 	pod 'Firebase'
 	pod 'FirebaseAnalytics'
 	pod 'FirebaseAuth'
+	pod 'lottie-ios'
 	
 
 

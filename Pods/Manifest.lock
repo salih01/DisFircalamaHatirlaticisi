@@ -80,6 +80,7 @@ PODS:
   - GoogleUtilities/UserDefaults (7.10.0):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (3.0.0)
+  - lottie-ios (3.5.0)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -101,6 +102,7 @@ DEPENDENCIES:
   - Firebase
   - FirebaseAnalytics
   - FirebaseAuth
+  - lottie-ios
   - OneSignalXCFramework (< 4.0, >= 3.0)
 
 SPEC REPOS:
@@ -114,6 +116,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - lottie-ios
     - nanopb
     - OneSignalXCFramework
     - PromisesObjC
@@ -128,10 +131,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 3bc3a6484b7bb20dd8489242c4dd3c92a3e5107b
   GoogleUtilities: bad72cb363809015b1f7f19beb1f1cd23c589f95
   GTMSessionFetcher: c1edebe64e9fb4e8f6415d018edf1fd3eac074a1
+  lottie-ios: c55158d67d0629a260625cc2ded2052b829e3c3e
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   OneSignalXCFramework: 75844c29607ca95e6176f6f21257b4382c7fdbfb
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 7dff2acf12ba81a10bd956a22da0d04922e5ec80
+PODFILE CHECKSUM: 885634392c42a06403d90d94aebf476a063e49a0
 
 COCOAPODS: 1.11.3
