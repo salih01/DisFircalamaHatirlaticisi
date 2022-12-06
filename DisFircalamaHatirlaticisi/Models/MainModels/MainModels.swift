@@ -12,7 +12,6 @@ struct MainModels {
     
     var dayNumber : String
     var backgroundImages: UIImage
-    
    
     
 }

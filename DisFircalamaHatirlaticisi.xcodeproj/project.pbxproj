@@ -20,9 +20,18 @@
 		7524BBFE29311BC000006CE6 /* GoogleService-Info-2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7524BBFD29311BC000006CE6 /* GoogleService-Info-2.plist */; };
 		7538F08C29312E1C00EA5E4E /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7538F08B29312E1C00EA5E4E /* NotificationService.swift */; };
 		7538F09029312E1C00EA5E4E /* OneSignalNotificationServiceExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 7538F08929312E1C00EA5E4E /* OneSignalNotificationServiceExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7547576C2938D47D001F5C95 /* done.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547576B2938D47D001F5C95 /* done.json */; };
+		7547576F29390707001F5C95 /* Details.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7547576E29390707001F5C95 /* Details.swift */; };
+		7547577A29396608001F5C95 /* 4.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577229396608001F5C95 /* 4.json */; };
+		7547577B29396608001F5C95 /* 7.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577329396608001F5C95 /* 7.json */; };
+		7547577C29396608001F5C95 /* 2.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577429396608001F5C95 /* 2.json */; };
+		7547577D29396608001F5C95 /* 3.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577529396608001F5C95 /* 3.json */; };
+		7547577E29396608001F5C95 /* 6.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577629396608001F5C95 /* 6.json */; };
+		7547577F29396608001F5C95 /* 9.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577729396608001F5C95 /* 9.json */; };
+		7547578029396608001F5C95 /* 5.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577829396608001F5C95 /* 5.json */; };
+		7547578129396608001F5C95 /* 8.json in Resources */ = {isa = PBXBuildFile; fileRef = 7547577929396608001F5C95 /* 8.json */; };
 		7589EF1B29339428000B2B5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7589EF1A29339428000B2B5A /* MainViewController.swift */; };
 		759640162937EACD003C909B /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 759640152937EACD003C909B /* DetailViewController.swift */; };
-		75964018293800DD003C909B /* done.json in Resources */ = {isa = PBXBuildFile; fileRef = 75964017293800DD003C909B /* done.json */; };
 		75A23AB629326BAB00D6A1D1 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A23AB529326BAB00D6A1D1 /* OnboardingModel.swift */; };
 		75A23ABC29327D5400D6A1D1 /* OnboardingCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A23ABA29327D2C00D6A1D1 /* OnboardingCollectionViewCell.swift */; };
 		75D99FAF29324D8F00CDDAE9 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75D99FAE29324D8F00CDDAE9 /* OnboardingViewController.swift */; };
@@ -74,9 +83,18 @@
 		7538F08929312E1C00EA5E4E /* OneSignalNotificationServiceExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = OneSignalNotificationServiceExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		7538F08B29312E1C00EA5E4E /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		7538F08D29312E1C00EA5E4E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7547576B2938D47D001F5C95 /* done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = done.json; sourceTree = "<group>"; };
+		7547576E29390707001F5C95 /* Details.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Details.swift; sourceTree = "<group>"; };
+		7547577229396608001F5C95 /* 4.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 4.json; sourceTree = "<group>"; };
+		7547577329396608001F5C95 /* 7.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 7.json; sourceTree = "<group>"; };
+		7547577429396608001F5C95 /* 2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 2.json; sourceTree = "<group>"; };
+		7547577529396608001F5C95 /* 3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 3.json; sourceTree = "<group>"; };
+		7547577629396608001F5C95 /* 6.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 6.json; sourceTree = "<group>"; };
+		7547577729396608001F5C95 /* 9.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 9.json; sourceTree = "<group>"; };
+		7547577829396608001F5C95 /* 5.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 5.json; sourceTree = "<group>"; };
+		7547577929396608001F5C95 /* 8.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = 8.json; sourceTree = "<group>"; };
 		7589EF1A29339428000B2B5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		759640152937EACD003C909B /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		75964017293800DD003C909B /* done.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = done.json; sourceTree = "<group>"; };
 		75A23AB529326BAB00D6A1D1 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		75A23ABA29327D2C00D6A1D1 /* OnboardingCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCollectionViewCell.swift; sourceTree = "<group>"; };
 		75B65F1F2931311B00A9ED2E /* DisFircalamaHatirlaticisi.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisFircalamaHatirlaticisi.entitlements; sourceTree = "<group>"; };
@@ -120,7 +138,15 @@
 		750A8DA829350096005C7A8C /* LottieJson */ = {
 			isa = PBXGroup;
 			children = (
-				75964017293800DD003C909B /* done.json */,
+				7547577429396608001F5C95 /* 2.json */,
+				7547577529396608001F5C95 /* 3.json */,
+				7547577229396608001F5C95 /* 4.json */,
+				7547577829396608001F5C95 /* 5.json */,
+				7547577629396608001F5C95 /* 6.json */,
+				7547577329396608001F5C95 /* 7.json */,
+				7547577929396608001F5C95 /* 8.json */,
+				7547577729396608001F5C95 /* 9.json */,
+				7547576B2938D47D001F5C95 /* done.json */,
 				75E3A2EE29363BD400865166 /* tooth1.json */,
 				750A8DA9293500AB005C7A8C /* lottie.json */,
 			);
@@ -194,6 +220,7 @@
 		7524BBFA2931197000006CE6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7547576D293906EF001F5C95 /* Details */,
 				750A8DAB29350FA7005C7A8C /* MainModels */,
 				75A23AB429326B8400D6A1D1 /* OnboardingModels */,
 			);
@@ -226,6 +253,14 @@
 				7538F08D29312E1C00EA5E4E /* Info.plist */,
 			);
 			path = OneSignalNotificationServiceExtension;
+			sourceTree = "<group>";
+		};
+		7547576D293906EF001F5C95 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				7547576E29390707001F5C95 /* Details.swift */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		7589EF192933940C000B2B5A /* Main */ = {
@@ -372,13 +407,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7547577F29396608001F5C95 /* 9.json in Resources */,
+				7547578029396608001F5C95 /* 5.json in Resources */,
+				7547577E29396608001F5C95 /* 6.json in Resources */,
+				7547577C29396608001F5C95 /* 2.json in Resources */,
 				7524BBF2293113D900006CE6 /* LaunchScreen.storyboard in Resources */,
+				7547578129396608001F5C95 /* 8.json in Resources */,
+				7547577D29396608001F5C95 /* 3.json in Resources */,
 				7524BBEF293113D900006CE6 /* Assets.xcassets in Resources */,
+				7547577A29396608001F5C95 /* 4.json in Resources */,
 				750A8DAA293500AB005C7A8C /* lottie.json in Resources */,
+				7547577B29396608001F5C95 /* 7.json in Resources */,
 				7524BBFE29311BC000006CE6 /* GoogleService-Info-2.plist in Resources */,
 				7524BBEA293113D800006CE6 /* Main.storyboard in Resources */,
 				75E3A2EF29363BD400865166 /* tooth1.json in Resources */,
-				75964018293800DD003C909B /* done.json in Resources */,
+				7547576C2938D47D001F5C95 /* done.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +505,7 @@
 			files = (
 				759640162937EACD003C909B /* DetailViewController.swift in Sources */,
 				75D99FB2293268D500CDDAE9 /* UIViewExtension.swift in Sources */,
+				7547576F29390707001F5C95 /* Details.swift in Sources */,
 				7524BBED293113D800006CE6 /* DisFircalamaHatirlaticisi.xcdatamodeld in Sources */,
 				750A8DAD29350FCC005C7A8C /* MainModels.swift in Sources */,
 				75A23AB629326BAB00D6A1D1 /* OnboardingModel.swift in Sources */,
