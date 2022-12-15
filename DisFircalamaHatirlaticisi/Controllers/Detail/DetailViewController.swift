@@ -7,21 +7,25 @@
 
 import UIKit
 import Lottie
+import CoreData
+
+
 
 class DetailViewController: UIViewController {
-
+   
     @IBOutlet weak var detailAnimationView: LottieAnimationView!
     @IBOutlet weak var detailDayLabel: UILabel!
     @IBOutlet weak var detailText: UITextView!
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var doneParticle: LottieAnimationView!
+    @IBOutlet weak var complete: UIImageView!
     
-    @IBOutlet weak var lablab: UILabel!
     
     var selectedDetails : Details?
     var models : MainModels?
     
-    
+    var getIndexPathRow = Int()
+ 
     
     // MARK: -LifeCycle
     
@@ -36,12 +40,13 @@ class DetailViewController: UIViewController {
         detailText.text = selectedDetails?.detailsTextView
         homeAnimation(animationIn: animationIn?.description ?? "ok")
         
+        
+        isSaved()
    
     }
     
    // MARK: - Function
 
-    
     func  homeAnimation(animationIn:String) {
       
         
@@ -57,6 +62,16 @@ class DetailViewController: UIViewController {
     }
     
     
+    
+    func isSaved() {
+        print(getIndexPathRow)
+        if MainViewController.shared.itemCD[getIndexPathRow].done{
+            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+        } else {
+            doneButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        }
+    }
+    
 
     
    // MARK: - Actions
@@ -69,16 +84,21 @@ class DetailViewController: UIViewController {
         animationView.contentMode = .center
         doneParticle.addSubview(animationView)
         animationView.play()
+ 
+        
+        if doneButton.currentImage == UIImage(systemName: "checkmark.seal.fill"){
+            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+        } else {
+            doneButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        }
         
         
-        // User defaults tanımı
-        let userDefaults = UserDefaults.standard
-        // user defaults kaydı
-        userDefaults.string(forKey: "tiklandimi")
-        // user defaults veri okuma
         
-      
-    
+        MainViewController.shared.itemCD[getIndexPathRow].done = !MainViewController.shared.itemCD[getIndexPathRow].done
+        
+        MainViewController.shared.saveItems()
+
+        
     }
     
 }

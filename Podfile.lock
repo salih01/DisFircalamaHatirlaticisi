@@ -102,6 +102,7 @@ DEPENDENCIES:
   - Firebase
   - FirebaseAnalytics
   - FirebaseAuth
+  - FirebaseCore
   - lottie-ios
   - OneSignalXCFramework (< 4.0, >= 3.0)
 
@@ -136,6 +137,6 @@ SPEC CHECKSUMS:
   OneSignalXCFramework: 75844c29607ca95e6176f6f21257b4382c7fdbfb
   PromisesObjC: ab77feca74fa2823e7af4249b8326368e61014cb
 
-PODFILE CHECKSUM: 885634392c42a06403d90d94aebf476a063e49a0
+PODFILE CHECKSUM: f12b8b6d788712f101e2f297eedab95c5aa913fc
 
 COCOAPODS: 1.11.3

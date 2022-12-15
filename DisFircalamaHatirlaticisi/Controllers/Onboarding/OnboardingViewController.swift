@@ -48,8 +48,8 @@ class OnboardingViewController: UIViewController {
         slides = [
         
             OnboardingModel(title: "Dişlerini düzenli fırçalamak ister misin ? ", image: UIImage(named: "tooth4")!),
-            OnboardingModel(title: "Dişlerini fırçala o zaman :D ? ", image: UIImage(named: "tooth1")!),
-            OnboardingModel(title: "Halledicez bi şekil  ", image: UIImage(named: "tooth2")!)
+            OnboardingModel(title: "30 gün boyunca buraya gel ve günleri tamamla  ", image: UIImage(named: "tooth1")!),
+            OnboardingModel(title: "Günlük hatırlatıcıyı etkinleştir ve sana hatırlatmamıza izin ver ..", image: UIImage(named: "tooth2")!)
         
         ]
     }
@@ -93,7 +93,7 @@ class OnboardingViewController: UIViewController {
         
         if currentPage == slides.count - 1 {
             
-            let controller = storyboard?.instantiateViewController(withIdentifier: "HomeTB") as! UITabBarController
+            let controller = storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! UIViewController
         
             
             controller.modalPresentationStyle = .fullScreen
