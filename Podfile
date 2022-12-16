@@ -11,7 +11,7 @@ target 'DisFircalamaHatirlaticisi' do
 	pod 'FirebaseAuth'
 	pod 'FirebaseCore'
 	pod 'lottie-ios'
-	
+	pod 'Google-Mobile-Ads-SDK'
 
 
 end

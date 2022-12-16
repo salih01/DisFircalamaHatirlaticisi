@@ -23,6 +23,8 @@ class DetailViewController: UIViewController {
     
     var selectedDetails : Details?
     var models : MainModels?
+ 
+
     
     var getIndexPathRow = Int()
  
@@ -39,6 +41,7 @@ class DetailViewController: UIViewController {
         detailDayLabel.text = selectedDetails?.detailsDayLabel
         detailText.text = selectedDetails?.detailsTextView
         homeAnimation(animationIn: animationIn?.description ?? "ok")
+    
         
         
         isSaved()
@@ -66,9 +69,9 @@ class DetailViewController: UIViewController {
     func isSaved() {
         print(getIndexPathRow)
         if MainViewController.shared.itemCD[getIndexPathRow].done{
-            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-        } else {
             doneButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        } else {
+            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
         }
     }
     
@@ -86,17 +89,17 @@ class DetailViewController: UIViewController {
         animationView.play()
  
         
-        if doneButton.currentImage == UIImage(systemName: "checkmark.seal.fill"){
-            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-        } else {
+        if doneButton.currentImage == UIImage(systemName: "checkmark.seal"){
             doneButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        } else {
+            doneButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
         }
-        
-        
         
         MainViewController.shared.itemCD[getIndexPathRow].done = !MainViewController.shared.itemCD[getIndexPathRow].done
         
         MainViewController.shared.saveItems()
+    
+        
 
         
     }

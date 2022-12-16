@@ -7,6 +7,8 @@
 import UIKit
 import Lottie
 import CoreData
+import GoogleMobileAds
+
 
 class MainViewController: UIViewController {
 
@@ -31,7 +33,7 @@ class MainViewController: UIViewController {
     var mainModels:[MainModels] = []
     var myDetails:[Details] = []
     var chosenDay : Details?
-
+    private var interstitial: GADInterstitialAd?
 
     
     // MARK: - Life Cycle
@@ -42,6 +44,18 @@ class MainViewController: UIViewController {
         
          loadItems()
          tableView.reloadData()
+        
+        let request = GADRequest()
+           GADInterstitialAd.load(withAdUnitID:"ca-app-pub-8604883118823285/3985930200",
+                                       request: request,
+                             completionHandler: { [self] ad, error in
+                               if let error = error {
+                                 print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                 return
+                               }
+                               interstitial = ad
+                             }
+           )
         
         modelsArray()
         
@@ -61,7 +75,7 @@ class MainViewController: UIViewController {
             let details14 = Details(detailsAnimationView: "33", detailsDayLabel: "14. Gün", detailsTextView: "Ferah bir nefese sahip olmaya yardımcı diğer yöntemler ise:Baharatlar, sarımsak ve soğan, kahve ve alkol gibi dönemsel olarak ağız kokusu kokusuna sebep olan yiyecek ve içeceklerden uzak durmak.Sigara içmeyi bırakmak. Sigara içmek kötü ağız kokusuna, dişlerin lekelenmesine sebep olur. Daha ferah nefes ve beyaz dişler için sigarayı bırakın.Bol bol su içerek ağzınızdaki hücreleri nemlendirerek plakları uzaklaştırmaya yardımcı olabilirsiniz ve böylelikle ağız kokusundan korunursunuz.Ağız kokusu gastrointestinal, boğaz ve göğüs enfeksiyonları gibi bazı tıbbi durumlardan da kaynaklanıyor olabilir.")
             let details15 = Details(detailsAnimationView: "13", detailsDayLabel: "15. Gün", detailsTextView: "İçeceklerinizde ve uygun yiyeceklerinizde tarçın kullanabilirsiniz. Tarçın ağız içi bakterilerle mücadelede önemli bir silahtır. Eğer varsa tarçınlı şekersiz sakızlar da uygun bir öneri olabilir. Özellikle yaşla artan vücut kuruması pek çok yönden dikkat edilmesi gereken bir durumdur. Çok su içmek onlarca diğer yararının yanında dilinizin kurumasını da önleyerek ağız kokusu ile mücadelede önemli bir silah olarak kullanılabilir. Su ağız içindeki bakterilerin minimumda tutulması için direk yardımcıdır. Ayrıca tükürük salgısını artırarak da yardımcı olur")
             let details16 = Details(detailsAnimationView: "14", detailsDayLabel: "16. Gün", detailsTextView: "Diş çürükleri, diş eti iltihapları ağız kokusunun önemli nedenlerindendir. Ağız içi herhangi bir enfeksiyon bakteri üremesini artıracağı için daima ağız kokusuna neden olur. Bu nedenle diş hekimizin önerilerini mutlaka dinlemelisiniz.Sinüzit gibi hava yolu rahatsızlıkları ve burun tıkanmasına neden olan diğer durumlar geceleri ağızdan nefes almamıza neden olur. Bu durum ağzı ve boğazı kurutarak bakterilerin üremesi için ideal bir ortam oluşturur. Azalan tükürük salgısı durumu daha kötü hale getirir. Bu nedenle kesinlikle burnunuz tıkalı uyumamalısınız.")
-            let details17 = Details(detailsAnimationView: "15", detailsDayLabel: "17. Gün", detailsTextView: "Beyaz un, beyaz şeker, glukoz/ fruktoz şurubu ile tatlandırılmış tüm hazır gıdalar ağız içindeki bakteriler için inanılmaz bir hazinedir. Bu tür şekerleri çok kolay kullanarak hızla çoğalırlar. Basit şekerler (atıştırmalık tüm şekerli gıdalarda olduğu gibi) diş çürüklerine neden olur ve ağız sağlığını büyük bir süratle bozarlar. Bu nedenle basit şeker tüketiminizi azaltmalısınız. Bu da su içmek gibi size onlarca yararın yanında ağız kokunuzun azalmasına da yardım edecektir.")
+            let details17 = Details(detailsAnimationView: "8", detailsDayLabel: "17. Gün", detailsTextView: "Beyaz un, beyaz şeker, glukoz/ fruktoz şurubu ile tatlandırılmış tüm hazır gıdalar ağız içindeki bakteriler için inanılmaz bir hazinedir. Bu tür şekerleri çok kolay kullanarak hızla çoğalırlar. Basit şekerler (atıştırmalık tüm şekerli gıdalarda olduğu gibi) diş çürüklerine neden olur ve ağız sağlığını büyük bir süratle bozarlar. Bu nedenle basit şeker tüketiminizi azaltmalısınız. Bu da su içmek gibi size onlarca yararın yanında ağız kokunuzun azalmasına da yardım edecektir.")
             let details18 = Details(detailsAnimationView: "34", detailsDayLabel: "18. Gün", detailsTextView: "Sigara içmek ağız kuruluğuna neden olduğundan ağız kokusuna sebep olur. Ayrıca diğer bir ağız kokusu nedeni olan diş eti hastalıklarına da zemin hazırlar.")
             let details19 = Details(detailsAnimationView: "17", detailsDayLabel: "19. Gün", detailsTextView: "Karbonat ile diş beyazlatma geleneksel fakat çok etkili sonuçlar veren bir yöntemdir.Hatta bu yöntem için diş beyazlatma çeşitleri arasında en güçlü etkiye sahip olanıdır, diyebiliriz.Yapmanız gereken diş fırçanızı ıslatın ve biraz karbonata batırın. Daha sonra dişlerinizi fırçalayın.")
             let details20 = Details(detailsAnimationView: "18", detailsDayLabel: "20. Gün", detailsTextView: "Ağız, insan vücudunun giriş kapısı olması nedeniyle, en çok bakteri ve mikrobun bulunduğu bir bölgedir. Bundan dolayı temizliği çok önemlidir. Bu da diş fırçalayarak ve gargara yaparak sağlanabilir. Yediğimiz yiyecekler  ağızda gerekli temizlik yapılmazsa bakteri plakları oluşur ve bu da dişlerin çürümesine ve dişlerin iltihaplanmasına yol açar. Bu yüzden   diş boşluğu boşluğu, üzücü sonuçlara yol açabilir. Bakteri etkisiyle yemek artıklarının çürüme ve fermantasyona tabi olacaktır. Buna ek olarak, yumuşak diş minesini tahrip eden asit, çürüme neden olacaktır. Bu dişler sadece zarar vermez, aynı zamanda iç organlarda oluşan hastalık, vücudun koruyucu yeteneğini azaltır ve hoş olmayan ağız kokusuna neden olur.")
@@ -167,9 +181,9 @@ class MainViewController: UIViewController {
         let indxPath = tableView.indexPathForRow(at: buttonPosition)
         
         if itemCD[indxPath!.row].done {
-            sender.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
-        } else {
             sender.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
+        } else {
+            sender.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
         }
         
         itemCD[indxPath!.row].done = !itemCD[indxPath!.row].done
@@ -203,9 +217,9 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
         
         
         if itemCD[indexPath.row].done {
-            cell.completeButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
-        } else {
             cell.completeButton.setImage(UIImage(systemName: "checkmark.seal.fill"), for: .normal)
+        } else {
+            cell.completeButton.setImage(UIImage(systemName: "checkmark.seal"), for: .normal)
             
         }
       
@@ -224,8 +238,17 @@ extension MainViewController:UITableViewDelegate,UITableViewDataSource{
         chosenDay = myDetails[indexPath.row]
         sendTheIndexPathRow = indexPath.row
 
-      
+        
+           if interstitial != nil {
+               interstitial?.present(fromRootViewController: self)
+
+           } else {
+             print("Ad wasn't ready")
+           }
+        
         self.performSegue(withIdentifier: "toDetailsVC", sender: nil)
+
+           
         
     }
     

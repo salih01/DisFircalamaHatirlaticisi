@@ -10,6 +10,7 @@ import OneSignal
 import CoreData
 import Firebase
 import FirebaseAuth
+import GoogleMobileAds
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -46,6 +47,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         
+        
+        // MARK: - Google ads
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         
         return true

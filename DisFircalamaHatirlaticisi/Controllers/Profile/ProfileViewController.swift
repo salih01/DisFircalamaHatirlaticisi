@@ -9,18 +9,33 @@ import UIKit
 import Firebase
 import UserNotifications
 import Lottie
+import GoogleMobileAds
 
 
 class ProfileViewController: UIViewController {
     
     
     @IBOutlet weak var animationView: LottieAnimationView!
+    private var interstitial: GADInterstitialAd?
     
     @IBOutlet weak var dateField: UIDatePicker!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         animationLottie()
+        
+        
+        let request = GADRequest()
+           GADInterstitialAd.load(withAdUnitID:"ca-app-pub-8604883118823285/3985930200",
+                                       request: request,
+                             completionHandler: { [self] ad, error in
+                               if let error = error {
+                                 print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                                 return
+                               }
+                               interstitial = ad
+                             }
+           )
        
     }
     
@@ -45,7 +60,7 @@ class ProfileViewController: UIViewController {
         content.title = "Diş Fırçalama Hatırlatıcısı"
         content.body = "Hatırlat Demiştin ! İşte hatırlatıyorum . Dişlerini fırçalama vakti .. 🦷"
         content.badge = 1
-        content.sound = UNNotificationSound(named: UNNotificationSoundName("tooth.mp3"))
+        content.sound = UNNotificationSound(named: UNNotificationSoundName("ses.mp3"))
         
         let getDate = targetDate.addingTimeInterval(1)
         let trigger = UNCalendarNotificationTrigger(dateMatching: Calendar.current.dateComponents([.hour,.minute,.second], from: getDate), repeats: true)
@@ -57,23 +72,18 @@ class ProfileViewController: UIViewController {
             }
         }
         
+     
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: self)
+        } else {
+          print("Ad wasn't ready")
+        }
+        
+        
         
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
- 
     @IBAction func logOut(_ sender: Any) {
         
         do {
